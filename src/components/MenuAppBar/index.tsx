@@ -39,7 +39,6 @@ export const MessageIcon = styled(Icon)`
 `
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
     width: '95%'
   },
   appBar:{

@@ -30,10 +30,22 @@ export const H3 = styled.div<{ color?: string }>`
   font-size: 16px;
   color: ${({ color }) => colors[color] || colors.charcoal};
 `
+
+export const H4 = styled.span`
+  font-family: Roboto;
+  font-size: 1.2;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: ${colors.textBlack};
+`
+
 export const H5 = styled.span`
   //styleName: H5 - Roboto / 16 / Bold / title;
   font-family: Roboto;
-  font-size: 16px;
+  font-size: 1.1em;
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
