@@ -30,6 +30,16 @@ export const H3 = styled.div<{ color?: string }>`
   font-size: 16px;
   color: ${({ color }) => colors[color] || colors.charcoal};
 `
+export const H5 = styled.span`
+  //styleName: H5 - Roboto / 16 / Bold / title;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+`
 export const Regular = styled.div<{ color?: string; lineHeight?: string }>`
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;

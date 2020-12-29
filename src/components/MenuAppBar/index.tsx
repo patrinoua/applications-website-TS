@@ -1,6 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import colors from '../../styleguide/colors'
+import {H5} from '../../styleguide/typography'
 import {
   AppBar, 
   Toolbar, 
@@ -39,12 +40,14 @@ export const MessageIcon = styled(Icon)`
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    width: '95%'
   },
   appBar:{
-    boxShadow: 'none'
+    boxShadow: 'none',
   },
   toolbar:{
     backgroundColor: `${colors.backgroundColor}`,
+    color: `${colors.grey500}`,
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -54,6 +57,12 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     color: `${colors.textBlack}`,
   },
+  h5:{
+    paddingRight: '15px',
+  },
+  supportIconContainer:{
+    display: 'flex', alignItems: 'center'
+  }
 }));
 
 export default function MenuAppBar() {
@@ -82,6 +91,31 @@ const handleAuthChange = (event) => {
           <Typography variant="h6" className={classes.title}>
             McMakler
           </Typography>
+          <div className={classes.supportIconContainer}>
+            <IconButton
+              aria-label="account of current user"
+              aria-controls="menu-appbar-auth"
+              aria-haspopup="true"
+              onClick={handleAuthChange}
+              color="primary"
+              >
+              <SupportIcon />
+            </IconButton>
+            <Typography className={classes.h5}>
+              <H5>Contact Support</H5>
+            </Typography>
+          </div>
+           {auth && <div>
+            <IconButton
+              aria-label="account of current user"
+              aria-controls="menu-appbar-auth"
+              aria-haspopup="true"
+              onClick={handleAuthChange}
+              color="primary"
+              >
+              <MessageIcon />
+            </IconButton>
+          </div>}
           <div>
             <IconButton
               aria-label="account of current user"
@@ -127,7 +161,6 @@ const handleAuthChange = (event) => {
               >
               <PowerIcon />
             </IconButton>
-            {console.log(auth)}
           </div>
         </Toolbar>
       </AppBar>
