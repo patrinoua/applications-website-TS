@@ -32,7 +32,7 @@ const StatusMenu = styled.div`
 const ApplicantsContainer = styled.div`
   width: 90%;
   height: 85vh;
-  max-width: 1340px;
+  max-width: 1200px;
   max-height: 1078px;
   left: 50px;
   top: 80px;
@@ -45,8 +45,8 @@ const MenuItemsContainer = styled.div`
   margin: 20px;
   align-items: center;
   @media (max-width: 450px){
-    margin: 10px;
-  }
+    margin: 10px 2px;
+  }  
 `
 const MenuItem = styled.div`
   margin: 15px;
@@ -56,6 +56,9 @@ const MenuItem = styled.div`
   @media (max-width: 800px){
     margin: 10px;
   }
+   @media (max-width: 450px){
+    margin: 5px;
+  }  
 `
 const SeparatingLine = styled.div`
   width: 1px;
@@ -69,7 +72,7 @@ const SeparatingLine = styled.div`
    display: none;
   }
 `
-const MenuItemTop = styled.div``
+const MenuItemTop = styled(H4)``
 const MenuItemBottom = styled.div``
 
 const ApplicantsPage: React.FC = ()=>{
@@ -84,23 +87,23 @@ const ApplicantsPage: React.FC = ()=>{
         </MenuItemsContainer>
         <MenuItemsContainer>
           <MenuItem>
-            <H4>{status.total}</H4>
-            <div>Total</div>
+            <MenuItemTop>{status.total}</MenuItemTop>
+            <MenuItemBottom>Total</MenuItemBottom>
           </MenuItem>
           <SeparatingLine />
           <MenuItem>
-            <H4>{status.new}</H4>
-            <div>New</div>
+            <MenuItemTop>{status.new}</MenuItemTop>
+            <MenuItemBottom>New</MenuItemBottom>
           </MenuItem>
           <SeparatingLine />
           <MenuItem>
-            <H4>{status.viewed}</H4>
-            <div>Viewed</div>
+            <MenuItemTop>{status.viewed}</MenuItemTop>
+            <MenuItemBottom>Viewed</MenuItemBottom>
           </MenuItem>
            <SeparatingLine />
           <MenuItem>
-            <H4>{status.appointments}</H4>
-            <div>Appointments</div>
+            <MenuItemTop>{status.appointments}</MenuItemTop>
+            <MenuItemBottom>Appointments</MenuItemBottom>
           </MenuItem>
            <SeparatingLine />
           <MenuItem>
@@ -126,7 +129,7 @@ const MenuAndApplicantsContainer = styled.div`
   left: 50px;
   top: 80px;
   background: ${colors.backgroundColor};
-  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+  // box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
 `
 const App: React.FC = () => {
   return (

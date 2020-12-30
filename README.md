@@ -1,4 +1,3 @@
-
 # typeScript-react-app
 
 React App, using
@@ -10,6 +9,15 @@ React App, using
 - Atomic Design
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Stack
+
+- [Create React App](https://facebook.github.io/create-react-app/) [v4.0.1](https://github.com/facebook/create-react-app/releases/tag/v4.0.1)
+- [TypeScript](https://www.typescriptlang.org/) [v4.0.5](https://github.com/microsoft/TypeScript/releases/tag/v4.0.5)
+- [Styled-Components](https://styled-components.com/): CSS-in-JS
+- [ESLint](https://eslint.org/)
+  - [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier)
+  - [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint#readme)
 
 ## Available Scripts
 
@@ -53,4 +61,5 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
 # applications-website-TS

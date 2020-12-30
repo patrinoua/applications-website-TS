@@ -2,6 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import colors from '../../styleguide/colors'
 import {H5} from '../../styleguide/typography'
+import {SupportText, SupportIcon, SupportIconContainer, UserIcon, PowerIcon, MessageIcon} from './elements'
 import {
   AppBar, 
   Toolbar, 
@@ -10,43 +11,20 @@ import {
   Menu, 
   MenuItem
 } from '@material-ui/core';
-
 import MenuIcon from '@material-ui/icons/Menu';
 
-import styled from 'styled-components'
-
-const Icon = styled.div`
-  width: 20px;
-  height: 20px;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-  &:hover {
-    cursor: pointer;
-  }
-`
-export const SupportIcon = styled(Icon)`
-  background-image: url('./icons/support.svg');
-`
-export const UserIcon = styled(Icon)`
-  background-image: url('./icons/user.svg');
-`
-export const PowerIcon = styled(Icon)`
-  background-image: url('./icons/power.svg');
-`
-export const MessageIcon = styled(Icon)`
-  background-image: url('./icons/message.svg');
-`
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '95%'
+    width: '90%', 
+    maxWidth: '1200px'
   },
   appBar:{
-    boxShadow: 'none',
+    boxShadow: 'none',  
   },
   toolbar:{
     backgroundColor: `${colors.backgroundColor}`,
     color: `${colors.grey500}`,
+    padding: 0
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -55,16 +33,10 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
     color: `${colors.textBlack}`,
-  },
-  h5:{
-    paddingRight: '15px',
-  },
-  supportIconContainer:{
-    display: 'flex', alignItems: 'center'
   }
 }));
 
-export default function MenuAppBar() {
+const MenuAppBar: React.FC = () => {
   const classes = useStyles();
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -90,7 +62,7 @@ const handleAuthChange = (event) => {
           <Typography variant="h6" className={classes.title}>
             McMakler
           </Typography>
-          <div className={classes.supportIconContainer}>
+          <SupportIconContainer>
             <IconButton
               aria-label="account of current user"
               aria-controls="menu-appbar-auth"
@@ -100,10 +72,10 @@ const handleAuthChange = (event) => {
               >
               <SupportIcon />
             </IconButton>
-            <Typography className={classes.h5}>
+            <SupportText>
               <H5>Contact Support</H5>
-            </Typography>
-          </div>
+            </SupportText>
+          </SupportIconContainer>
            {auth && <div>
             <IconButton
               aria-label="account of current user"
@@ -166,3 +138,5 @@ const handleAuthChange = (event) => {
     </div>
   );
 }
+
+export default MenuAppBar
