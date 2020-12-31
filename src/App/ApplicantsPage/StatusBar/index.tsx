@@ -1,6 +1,7 @@
 import React from 'react'
 import {
   StatusMenu,
+  TitleContainer,
   MenuItemsContainer,
   ArrowIcon,
   MenuItem,
@@ -15,10 +16,10 @@ import { H3 } from 'styleguide/typography'
 const StatusBar: React.FC = () => {
   return (
     <StatusMenu>
-      <MenuItemsContainer>
+      <TitleContainer>
         <ArrowIcon />
         <H3>Applicants</H3>
-      </MenuItemsContainer>
+      </TitleContainer>
       <MenuItemsContainer>
         <MenuItem>
           <MenuItemTop>{status.total}</MenuItemTop>

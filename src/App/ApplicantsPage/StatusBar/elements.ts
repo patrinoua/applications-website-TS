@@ -24,12 +24,17 @@ const Icon = styled.div`
 export const ArrowIcon = styled(Icon)`
   background-image: url('./icons/arrow.svg');
 `
+export const TitleContainer = styled.div`
+  display: flex;
+  margin: 20px;
+  align-items: center;
+`
 export const MenuItemsContainer = styled.div`
   display: flex;
   margin: 20px;
   align-items: center;
-  @media (max-width: 450px) {
-    margin: 10px 2px;
+  @media (max-width: 550px) {
+    display: none;
   }
 `
 export const MenuItem = styled.div`
@@ -37,12 +42,6 @@ export const MenuItem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (max-width: 800px) {
-    margin: 10px;
-  }
-  @media (max-width: 450px) {
-    margin: 5px;
-  }
 `
 export const MenuItemTop = styled(H4)``
 
@@ -53,10 +52,4 @@ export const SeparatingLine = styled.div`
   height: 45px;
   background: #e6e6e6;
   margin: 10px;
-  @media (max-width: 550px) {
-    margin: 5px;
-  }
-  @media (max-width: 500px) {
-    display: none;
-  }
 `

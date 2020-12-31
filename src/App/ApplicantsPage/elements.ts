@@ -11,6 +11,7 @@ export const ApplicantsContainer = styled.div`
   background: ${colors.white};
   border-radius: 3px;
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+  overflow: scroll;
 `
 
 export const StatusMenu = styled.div`

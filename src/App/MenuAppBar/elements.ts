@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {Typography} from '@material-ui/core';
+import { Typography } from '@material-ui/core'
 
 const Icon = styled.div`
   width: 20px;
@@ -13,7 +13,7 @@ const Icon = styled.div`
 `
 export const SupportText = styled(Typography)`
   padding-right: 15px;
-  @media (max-width: 500px){
+  @media (max-width: 500px) {
     display: none;
   }
 `
@@ -21,8 +21,11 @@ export const SupportIcon = styled(Icon)`
   background-image: url('./icons/support.svg');
 `
 export const SupportIconContainer = styled.div`
-  display: flex; 
+  display: flex;
   align-items: center;
+  @media (max-width: 500px) {
+    display: none;
+  }
 `
 
 export const UserIcon = styled(Icon)`
@@ -33,4 +36,9 @@ export const PowerIcon = styled(Icon)`
 `
 export const MessageIcon = styled(Icon)`
   background-image: url('./icons/message.svg');
+`
+export const ResponsiveIconButtonContainer = styled.div`
+  @media (max-width: 500px) {
+    display: none;
+  }
 `
