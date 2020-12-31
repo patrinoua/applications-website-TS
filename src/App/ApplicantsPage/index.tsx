@@ -1,13 +1,14 @@
 import React from 'react'
 import { ApplicantsContainer } from './elements'
 import StatusBar from './StatusBar'
-import AppointmentSet from './AppointmentSet'
+import AppointmentList from './ApplicantsList'
 
 const ApplicantsPage: React.FC = () => {
   return (
     <ApplicantsContainer>
       <StatusBar />
-      <AppointmentSet />
+      SearchBar | Bids | Status
+      <AppointmentList />
     </ApplicantsContainer>
   )
 }

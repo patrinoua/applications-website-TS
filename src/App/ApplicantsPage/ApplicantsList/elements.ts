@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { H4, Body2 } from 'styleguide/typography'
 
 export const StatusMenu = styled.div`
   display: flex;
@@ -44,10 +43,8 @@ export const MenuItem = styled.div`
     margin: 5px;
   }
 `
-export const MenuItemTop = styled(H4)``
-
-export const MenuItemBottom = styled(Body2)``
-
+export const MenuItemTop = styled.div``
+export const MenuItemBottom = styled.div``
 export const SeparatingLine = styled.div`
   width: 1px;
   height: 45px;

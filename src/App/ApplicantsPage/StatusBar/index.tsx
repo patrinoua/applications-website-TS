@@ -8,16 +8,16 @@ import {
   MenuItemBottom,
   SeparatingLine,
 } from './elements'
-import { status } from '../../../api.js'
+import { status } from 'api.js'
 
-import { H4 } from '../../../styleguide/typography'
+import { H3 } from 'styleguide/typography'
 
 const StatusBar: React.FC = () => {
   return (
     <StatusMenu>
       <MenuItemsContainer>
         <ArrowIcon />
-        <H4>Applications</H4>
+        <H3>Applicants</H3>
       </MenuItemsContainer>
       <MenuItemsContainer>
         <MenuItem>
@@ -41,8 +41,8 @@ const StatusBar: React.FC = () => {
         </MenuItem>
         <SeparatingLine />
         <MenuItem>
-          <H4>{status.others}</H4>
-          <div>Others</div>
+          <MenuItemTop>{status.others}</MenuItemTop>
+          <MenuItemBottom>Others</MenuItemBottom>
         </MenuItem>
       </MenuItemsContainer>
     </StatusMenu>
