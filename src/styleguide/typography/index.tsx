@@ -1,47 +1,26 @@
 import styled from 'styled-components'
-import colors from '../colors'
 
-interface TypographyProps {
-  lineHeight?: string
-  caps?: boolean
-  color?: string
-}
-export const H1 = styled.div<TypographyProps>`
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
+export const H3 = styled.span`
+  //styleName: H3 - Roboto / 24 / Bold / title;
+  font-family: Roboto;
   font-size: 24px;
-  line-height: ${({ lineHeight }) => lineHeight || '56px'};
-  color: ${({ color }) => colors[color] || colors.charcoal};
   font-style: normal;
-  letter-spacing: 0.05em;
-  text-transform: ${({ caps }) => caps === true && 'uppercase'};
-`
-export const H2 = styled.div<{ caps?: boolean; lineHeight?: string }>`
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: ${({ lineHeight }) => lineHeight || '56px'};
-  color: ${({ color }) => colors[color] || colors.charcoal};
-  text-transform: ${({ caps }) => caps === true && 'uppercase'};
-`
-export const H3 = styled.div<{ color?: string }>`
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  color: ${({ color }) => colors[color] || colors.charcoal};
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: left;
 `
 
 export const H4 = styled.span`
+  //styleName: H4 - Roboto / 20 / Bold / title;
   font-family: Roboto;
-  font-size: 1.2;
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 0px;
-  text-align: center;
-  color: ${colors.textBlack};
+  text-align: left;
 `
-
 export const H5 = styled.span`
   //styleName: H5 - Roboto / 16 / Bold / title;
   font-family: Roboto;
@@ -52,64 +31,26 @@ export const H5 = styled.span`
   letter-spacing: 0px;
   text-align: center;
 `
-export const Regular = styled.div<{ color?: string; lineHeight?: string }>`
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: ${({ lineHeight }) => lineHeight || '24px'};
-  color: ${({ color }) => colors[color] || colors.charcoal};
-`
-export const RegularMedium = styled.div<{
-  color?: string
-  lineHeight?: string
-}>`
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: ${({ lineHeight }) => lineHeight || '24px'};
-  color: ${({ color }) => colors[color] || colors.charcoal};
-`
-export const Body = styled.div<{ color?: string }>`
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
+export const Body1 = styled.div<{ color?: string }>`
+  /* Body 1 - Roboto / 16 / Regular */
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  color: ${({ color }) => colors[color] || colors.charcoal};
-  text-transform: uppercase;
+  /* identical to box height, or 150% */
+
+  text-align: center;
+
+  color: #4a4a4a;
 `
-export const MenuMedium = styled.div<{ color?: string }>`
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  color: ${({ color }) => colors[color] || colors.charcoal};
-  text-transform: uppercase;
-`
-export const MenuBold = styled.div<{ color?: string }>`
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 800;
-  font-size: 16px;
-  line-height: 24px;
-  color: ${({ color }) => colors[color] || colors.white};
-  text-transform: uppercase;
-`
-export const Subtitle = styled.div<{ color?: string }>`
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
+export const Body2 = styled.div`
+  //styleName: Body 2 - Roboto / 14 / Regular;
+  font-family: Roboto;
   font-size: 14px;
-  line-height: 21px;
-  color: ${({ color }) => colors[color] || colors.mediumGray};
-`
-export const SubtitleMedium = styled.div<{ color?: string }>`
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 16px;
-  color: ${({ color }) => colors[color] || colors.charcoal};
-`
-export const Button = styled.div<{ color?: string }>`
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 800;
-  font-size: 16px;
-  color: ${({ color }) => colors[color] || colors.white};
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
 `

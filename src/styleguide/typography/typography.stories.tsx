@@ -2,19 +2,7 @@ import React from 'react'
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import { Story, Meta } from '@storybook/react/types-6-0'
 import styled from 'styled-components'
-import {
-  H1,
-  H2,
-  H3,
-  Regular,
-  RegularMedium,
-  Body,
-  MenuMedium,
-  MenuBold,
-  Subtitle,
-  SubtitleMedium,
-  Button,
-} from './index'
+import { H3, H4, H5, Body1, Body2 } from './index'
 import colors from '../colors'
 const Container = styled.div`
   margin: 10px;
@@ -22,35 +10,17 @@ const Container = styled.div`
 
 const Typography = () => (
   <Container>
-    <H1>This is H1</H1>
-    <br />
-    <H1 caps={true}>This is H1 (caps = true)</H1>
-    <br />
-    <H2>This is H2</H2>
-    <br />
-    <H2 caps={true}>This is H2 (caps = true)</H2>
     <br />
     <H3>This is H3</H3>
     <br />
-    <Regular>This is Regular</Regular>
+    <H4>This is H3</H4>
     <br />
-    <RegularMedium>This is RegularMedium</RegularMedium>
+    <H5>This is H3</H5>
     <br />
-    <Body>This is Body</Body>
+    <Body1>This is Body1</Body1>
     <br />
-    <MenuMedium>This is Menu Medium</MenuMedium>
+    <Body2>This is Regular</Body2>
     <br />
-    <div style={{ backgroundColor: colors.mediumGray, width: '160px' }}>
-      <MenuBold>This is Menu Bold</MenuBold>
-    </div>
-    <br />
-    <Subtitle>This is Subtitle</Subtitle>
-    <br />
-    <SubtitleMedium>This is SubtitleMedium</SubtitleMedium>
-    <br />
-    <div style={{ backgroundColor: colors.mediumGray, width: '160px' }}>
-      <Button>This is Button</Button>
-    </div>
     <br />
   </Container>
 )
