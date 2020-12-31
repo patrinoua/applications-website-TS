@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
+import { Container } from './elements'
 const ApplicantsPage = React.lazy(() => import('./ApplicantsPage'))
 const MenuAppBar = React.lazy(() => import('./MenuAppBar'))
-import { Container } from './elements'
 
 const App: React.FC = () => {
   return (
