@@ -1,53 +1,72 @@
-export const applicants = {
-  appl_1: {
+import { APPOINTMENT_STATUS } from './constants'
+export const applicants = [
+  {
+    applicantId: 'appl_1',
     fullName: 'Friedrich Heinrich',
     phoneNumber: '+49 146 344 23811',
     email: 'friedrich.heinrich@gmail.com',
+    appointmentStatus: APPOINTMENT_STATUS.appointmentSet,
     appointmentDate: '22 JULY 14:00',
-    viewedOn: 'undefined',
+    viewedOn: null,
     hasBeenViewed: false,
+    offeredBid: null,
   },
-  appl_2: {
+  {
+    applicantId: 'appl_2',
     fullName: 'Hans Ulrich',
     phoneNumber: '+49 146 344 23811',
     email: 'friedrich.heinrich@gmail.com',
+    appointmentStatus: APPOINTMENT_STATUS.appointmentSet,
     appointmentDate: '22 JULY 14:00',
-    viewedOn: 'undefined',
+    viewedOn: null,
     hasBeenViewed: false,
+    offeredBid: null,
   },
-  appl_3: {
+  {
+    applicantId: 'appl_3',
     fullName: 'Karlheinz Brandenburg',
     phoneNumber: '+49 146 344 23811',
     email: 'friedrich.heinrich@gmail.com',
+    appointmentStatus: APPOINTMENT_STATUS.viewed,
     appointmentDate: '22 JULY 14:00',
-    viewedOn: 'undefined',
+    viewedOn: null,
     hasBeenViewed: false,
+    offeredBid: null,
   },
-  appl_4: {
+  {
+    applicantId: 'appl_4',
     fullName: 'Karlheinz Brandenburg',
     phoneNumber: '+49 146 344 23811',
     email: 'friedrich.heinrich@gmail.com',
+    appointmentStatus: APPOINTMENT_STATUS.viewed,
     appointmentDate: '22 JULY 14:00',
     viewedOn: '11 June 11:30',
     hasBeenViewed: true,
+    offeredBid: '250.000€',
   },
-  appl_5: {
+  {
+    applicantId: 'appl_5',
     fullName: 'Karlheinz Brandenburg',
     phoneNumber: '+49 146 344 23811',
     email: 'friedrich.heinrich@gmail.com',
+    appointmentStatus: APPOINTMENT_STATUS.viewed,
     appointmentDate: '22 JULY 14:00',
     viewedOn: '11 June 11:30',
     hasBeenViewed: true,
+    offeredBid: '250.000€',
   },
-  appl_6: {
+  {
+    applicantId: 'appl_6',
     fullName: 'Karlheinz Brandenburg',
     phoneNumber: '+49 146 344 23811',
     email: 'friedrich.heinrich@gmail.com',
+    appointmentStatus: APPOINTMENT_STATUS.viewed,
     appointmentDate: '22 JULY 14:00',
     viewedOn: '11 June 11:30',
     hasBeenViewed: true,
+    offeredBid: '250.000€',
   },
-}
+]
 
 export const status = {
   total: 25,
