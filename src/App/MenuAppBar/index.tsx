@@ -1,7 +1,8 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import colors from '../../styleguide/colors'
-import { H5 } from '../../styleguide/typography'
+import colors from 'styleguide/colors'
+import { H5 } from 'styleguide/typography'
+
 import {
   SupportText,
   SupportIcon,
