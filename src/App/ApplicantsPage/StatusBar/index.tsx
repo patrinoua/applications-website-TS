@@ -37,7 +37,7 @@ const StatusBar: React.FC = () => {
         </MenuItem>
         <SeparatingLine />
         <MenuItem>
-          <MenuItemTop>{status.appointments}</MenuItemTop>
+          <MenuItemTop>{status.appointmentSet}</MenuItemTop>
           <MenuItemBottom>Appointments</MenuItemBottom>
         </MenuItem>
         <SeparatingLine />

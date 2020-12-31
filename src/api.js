@@ -72,6 +72,6 @@ export const status = {
   total: 25,
   new: 10,
   viewed: 5,
-  appointments: 3,
+  appointmentSet: 3,
   others: 6,
 }

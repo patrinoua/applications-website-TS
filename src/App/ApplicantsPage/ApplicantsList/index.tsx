@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { applicants } from 'api'
+import { applicants, status } from 'api'
 import { APPOINTMENT_STATUS } from '../../../constants'
 import { H4 } from 'styleguide/typography'
 import styled from 'styled-components'
@@ -27,7 +27,7 @@ const AppointmentSet: React.FC = () => {
   )
   return (
     <Container>
-      <H4>Appointment Set</H4>
+      <H4>Appointment Set ({status.appointmentSet})</H4>
       <AllApplicantsContainer>
         {applicaintsWithAppointmentSet.map(
           (
@@ -64,7 +64,7 @@ const AppointmentSet: React.FC = () => {
           }
         )}
       </AllApplicantsContainer>
-      <H4>Property Viewed</H4>
+      <H4>Property Viewed ({status.viewed})</H4>
       <AllApplicantsContainer>
         {viewedApplicants.map(
           (
