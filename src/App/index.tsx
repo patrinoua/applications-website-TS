@@ -1,14 +1,16 @@
-import React from 'react'
-import ApplicantsPage from './ApplicantsPage'
-import MenuAppBar from './MenuAppBar'
+import React, { Suspense } from 'react'
+const ApplicantsPage = React.lazy(() => import('./ApplicantsPage'))
+const MenuAppBar = React.lazy(() => import('./MenuAppBar'))
 import { Container } from './elements'
 
 const App: React.FC = () => {
   return (
-    <Container>
-      <MenuAppBar />
-      <ApplicantsPage />
-    </Container>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Container>
+        <MenuAppBar />
+        <ApplicantsPage />
+      </Container>
+    </Suspense>
   )
 }
 
