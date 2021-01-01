@@ -31,6 +31,7 @@ const colors = {
   textGreen: '#5eb77f',
   highlightGray: '#eff2f6',
   boxShadow: ' rgba(0, 0, 0, 0.25)',
+  grey300: '#e6e6e6',
   grey500: '#4a4a4a',
   textBlack: '#343434',
 }
