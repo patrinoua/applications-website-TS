@@ -61,20 +61,20 @@ export const SearchBarContainer = styled.div`
 const ApplicantsPage: React.FC = () => {
   const [filteredApplicants, setApplicants] = useState(applicants)
 
-  const inputHandler = (value) => {
+  const inputHandler = (e) => {
+    const value = e.target.value
     const filteringApplicants = filteredApplicants.filter(
       (applicant) =>
         applicant.fullName.toLowerCase().includes(value.toLowerCase()) ||
         applicant.email.toLowerCase().includes(value.toLowerCase())
     )
     setApplicants(filteringApplicants)
-    console.log(filteringApplicants)
     if (value === '') {
       setApplicants(applicants)
     }
-    // // window.history.push('/dresses?color=blue')
-    // // window.history.pushState({}, '', 'urlPath')
-    // console.log(value)
+    if (e.key === 'Enter') {
+      window.history.pushState({}, '', `/page/?search=${value}`)
+    }
   }
 
   const viewedApplicants = filteredApplicants.filter(
@@ -91,7 +91,7 @@ const ApplicantsPage: React.FC = () => {
         <SearchIcon />
         <SearchBar
           placeholder='Search for applicant'
-          onKeyUp={(e) => inputHandler(e.target.value)}
+          onKeyUp={(e) => inputHandler(e)}
         />
       </SearchBarContainer>
       <ApplicantsList
