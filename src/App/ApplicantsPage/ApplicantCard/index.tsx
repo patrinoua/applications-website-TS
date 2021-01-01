@@ -36,6 +36,7 @@ const ApplicantCard: React.FC<Props> = ({
   offeredBid,
   position,
 }) => {
+  if (viewedOn) position = +position + 1
   const color: number = +position % 5
 
   return (
