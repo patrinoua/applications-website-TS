@@ -1,13 +1,11 @@
 import styled from 'styled-components'
 import { H5, Body1 } from 'styleguide/typography'
-
+import colors from 'styleguide/colors'
 export const ApplicantContainer = styled.div`
   width: 305px;
   height: 241px;
-  /* White */
-  background: #ffffff;
-  /* Grey 200 */
-  border: 1px solid #efefef;
+  background: ${colors.white};
+  border: 1px solid ${colors.grey200};
   box-sizing: border-box;
   border-radius: 4px;
   margin: 20px 20px 0 0;
@@ -24,7 +22,7 @@ export const Circle = styled.div`
   height: 70px;
   margin-top: 20px;
   margin-bottom: 5px;
-  background: #e3e7f9;
+  background: ${colors.yellow400};
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -33,17 +31,9 @@ export const Circle = styled.div`
 `
 export const ApplicantName = styled(H5)`
   /* H5 - Roboto / 16 / Bold / title */
-
-  font-family: Roboto;
-  font-style: normal;
   font-weight: bold;
   font-size: 16px;
-  line-height: 24px;
-  /* identical to box height, or 150% */
-
-  text-align: center;
-
-  color: #4a4a4a;
+  color: ${colors.grey500};
 `
 export const TelephoneNumber = styled(Body1)``
 export const Email = styled(Body1)``
@@ -51,8 +41,7 @@ export const AppointmentStatus = styled.div`
   width: 181px;
   height: 18px;
   margin-top: 10px;
-  /* Grey 400 */
-  background: #9d9d9d;
+  background: ${colors.grey400};
   border-radius: 3px;
   font-family: Roboto;
   font-size: 12px;
@@ -61,7 +50,7 @@ export const AppointmentStatus = styled.div`
   line-height: 10px;
   letter-spacing: 0px;
   text-align: left;
-  color: white;
+  color: ${colors.white};
   text-transform: uppercase;
   display: flex;
   justify-content: center;
@@ -71,21 +60,15 @@ export const AppointmentStatus = styled.div`
 export const OfferedBid = styled.div`
   width: 90px;
   height: 18px;
-  /* Yellow 400 */
-  background: #feb902;
+  background: ${colors.yellow400};
   border-radius: 3px;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
   line-height: 10px;
-  /* identical to box height, or 83% */
-
   text-transform: uppercase;
-
-  /* White */
-
-  color: #ffffff;
+  color: ${colors.white};
   margin-top: 10px;
   display: flex;
   justify-content: center;

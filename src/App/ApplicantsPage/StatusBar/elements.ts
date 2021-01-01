@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { H4, Body2 } from 'styleguide/typography'
+import colors from 'styleguide/colors'
 
 export const StatusMenu = styled.div`
   display: flex;
@@ -50,6 +51,6 @@ export const MenuItemBottom = styled(Body2)``
 export const SeparatingLine = styled.div`
   width: 1px;
   height: 45px;
-  background: #e6e6e6;
+  background: ${colors.grey300};
   margin: 10px;
 `

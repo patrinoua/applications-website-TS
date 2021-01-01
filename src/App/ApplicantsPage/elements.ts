@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import colors from '../../styleguide/colors'
+import colors from 'styleguide/colors'
 
 export const ApplicantsContainer = styled.div`
   width: 90%;
@@ -64,14 +64,14 @@ export const MenuItem = styled.div`
 export const MenuItemTop = styled.div``
 export const MenuItemBottom = styled.div``
 export const SeparatingLine = styled.div`
-  width: 1px;
-  height: 45px;
-  background: #e6e6e6;
-  margin: 10px;
-  @media (max-width: 550px) {
-    margin: 5px;
-  }
-  @media (max-width: 500px) {
-    display: none;
-  }
-`
+         width: 1px;
+         height: 45px;
+         background: ${colors.grey300};
+         margin: 10px;
+         @media (max-width: 550px) {
+           margin: 5px;
+         }
+         @media (max-width: 500px) {
+           display: none;
+         }
+       `
