@@ -12,6 +12,10 @@ export const ApplicantsContainer = styled.div`
   border-radius: 3px;
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
   overflow: scroll;
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
 `
 
 export const StatusMenu = styled.div`
