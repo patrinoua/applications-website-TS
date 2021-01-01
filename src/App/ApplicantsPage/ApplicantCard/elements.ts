@@ -15,6 +15,9 @@ export const ApplicantContainer = styled.div`
   flex-direction: column;
   align-items: center;
   flex-shrink: 0;
+  @media (max-width: 500px) {
+    width: 90%;
+  }
 `
 export const Circle = styled.div`
   width: 70px;
