@@ -1,7 +1,6 @@
 import React from 'react'
+import { status } from 'api'
 
-import { applicants, status } from 'api'
-import { APPOINTMENT_STATUS } from '../../../constants'
 import { H4 } from 'styleguide/typography'
 import styled from 'styled-components'
 import ApplicantCard from '../ApplicantCard'
@@ -16,90 +15,88 @@ const AllApplicantsContainer = styled.div`
     background: transparent;
   }
 `
+interface ApplicantsProps {
+  applicantId: string
+  fullName: String
+  phoneNumber: String
+  email: String
+  appointmentStatus: String
+  appointmentDate: String
+  viewedOn: String | null
+  offeredBid: String | null
+}
+interface Applicants {
+  viewedApplicants: Array<ApplicantsProps>
+  applicantsWithAppointmentSet: Array<ApplicantsProps>
+}
 
-const AppointmentSet: React.FC = () => {
-  const viewedApplicants = applicants.filter(
-    (applicant) => applicant.appointmentStatus === APPOINTMENT_STATUS.viewed
-  )
-  const applicaintsWithAppointmentSet = applicants.filter(
-    (applicant) =>
-      applicant.appointmentStatus === APPOINTMENT_STATUS.appointmentSet
-  )
+const ApplicantsList: React.FC<Applicants> = ({
+  viewedApplicants,
+  applicantsWithAppointmentSet,
+}) => {
+  const applicantType = [
+    {
+      appointmentSet: `Appointment Set (${status.appointmentSet})`,
+      data: applicantsWithAppointmentSet,
+    },
+    {
+      viewed: `Property Viewed (${status.viewed})`,
+      data: viewedApplicants,
+    },
+  ]
   return (
     <Container>
-      <H4>Appointment Set ({status.appointmentSet})</H4>
-      <AllApplicantsContainer>
-        {applicaintsWithAppointmentSet.map(
-          (
-            {
-              applicantId,
-              fullName,
-              phoneNumber,
-              email,
-              appointmentStatus,
-              appointmentDate,
-              viewedOn,
-              offeredBid,
-            },
-            position
-          ) => {
-            const initials =
-              fullName.split(' ')[0].slice(0, 1) +
-              fullName.split(' ')[1].slice(0, 1)
-            console.log('position', position)
-            return (
-              <ApplicantCard
-                initials={initials}
-                fullName={fullName}
-                phoneNumber={phoneNumber}
-                email={email}
-                appointmentStatus={appointmentStatus}
-                appointmentDate={appointmentDate}
-                viewedOn={viewedOn}
-                offeredBid={offeredBid}
-                position={position}
-                key={applicantId}
-              />
-            )
-          }
-        )}
-      </AllApplicantsContainer>
-      <H4>Property Viewed ({status.viewed})</H4>
-      <AllApplicantsContainer>
-        {viewedApplicants.map(
-          (
-            {
-              fullName,
-              phoneNumber,
-              email,
-              appointmentStatus,
-              appointmentDate,
-              viewedOn,
-              offeredBid,
-            },
-            position
-          ) => {
-            const initials =
-              fullName.split(' ')[0].slice(0, 1) +
-              fullName.split(' ')[1].slice(0, 1)
-            return (
-              <ApplicantCard
-                initials={initials}
-                fullName={fullName}
-                phoneNumber={phoneNumber}
-                email={email}
-                appointmentStatus={appointmentStatus}
-                appointmentDate={appointmentDate}
-                viewedOn={viewedOn}
-                offeredBid={offeredBid}
-                position={position + 1}
-              />
-            )
-          }
-        )}
-      </AllApplicantsContainer>
+      {applicantType.map((applicant) => {
+        const applicantsType = Object.keys(applicant)
+        const applicantsContent = Object.values(applicant)
+        return (
+          <div key={applicantsType[0]}>
+            <H4>{applicantsContent[0]}</H4>
+            <AllApplicantsContainer>
+              {applicant.data.map(
+                (
+                  {
+                    applicantId,
+                    fullName,
+                    phoneNumber,
+                    email,
+                    appointmentStatus,
+                    appointmentDate,
+                    viewedOn,
+                    offeredBid,
+                  },
+                  position
+                ) => {
+                  let initials = ''
+                  const splitName = fullName.split(' ')
+                  if (splitName.length >= 2) {
+                    initials =
+                      splitName[0].slice(0, 1) + splitName[1].slice(0, 1)
+                  } else if (fullName.split(' ').length == 1) {
+                    initials = splitName[0].slice(0, 1)
+                  }
+                  return (
+                    <ApplicantCard
+                      initials={initials}
+                      fullName={fullName}
+                      phoneNumber={phoneNumber}
+                      email={email}
+                      appointmentStatus={appointmentStatus}
+                      appointmentDate={appointmentDate}
+                      viewedOn={viewedOn}
+                      offeredBid={offeredBid}
+                      position={position}
+                      key={applicantId}
+                    />
+                  )
+                }
+              )}
+            </AllApplicantsContainer>
+          </div>
+        )
+      })}
     </Container>
   )
 }
 
-export default AppointmentSet
+export default ApplicantsList

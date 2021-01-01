@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ApplicantsContainer } from './elements'
 import StatusBar from './StatusBar'
-import AppointmentList from './ApplicantsList'
-
+import ApplicantsList from './ApplicantsList'
+import { applicants } from 'api'
+import { APPOINTMENT_STATUS } from '../../constants'
 import styled from 'styled-components'
 import colors from 'styleguide/colors'
 
@@ -56,25 +57,47 @@ export const SearchBarContainer = styled.div`
     width: auto;
   }
 `
-const SearchBarCompo: React.FC = () => {
-  return (
-    <SearchBarContainer>
-      <SearchIcon />
-      <SearchBar
-        placeholder='Search for applicant'
-        // onKeyUp={(e) => inputHandler(e)}
-        // value={text}
-        // onChange={(e) => setText(e.target.value)}
-      />
-    </SearchBarContainer>
-  )
-}
+
 const ApplicantsPage: React.FC = () => {
+  const [filteredApplicants, setApplicants] = useState(applicants)
+
+  const inputHandler = (value) => {
+    const filteringApplicants = filteredApplicants.filter(
+      (applicant) =>
+        applicant.fullName.toLowerCase().includes(value.toLowerCase()) ||
+        applicant.email.toLowerCase().includes(value.toLowerCase())
+    )
+    setApplicants(filteringApplicants)
+    console.log(filteringApplicants)
+    if (value === '') {
+      setApplicants(applicants)
+    }
+    // // window.history.push('/dresses?color=blue')
+    // // window.history.pushState({}, '', 'urlPath')
+    // console.log(value)
+  }
+
+  const viewedApplicants = filteredApplicants.filter(
+    (applicant) => applicant.appointmentStatus === APPOINTMENT_STATUS.viewed
+  )
+  const applicantsWithAppointmentSet = filteredApplicants.filter(
+    (applicant) =>
+      applicant.appointmentStatus === APPOINTMENT_STATUS.appointmentSet
+  )
   return (
     <ApplicantsContainer>
       <StatusBar />
-      <SearchBarCompo />
-      <AppointmentList />
+      <SearchBarContainer>
+        <SearchIcon />
+        <SearchBar
+          placeholder='Search for applicant'
+          onKeyUp={(e) => inputHandler(e.target.value)}
+        />
+      </SearchBarContainer>
+      <ApplicantsList
+        viewedApplicants={viewedApplicants}
+        applicantsWithAppointmentSet={applicantsWithAppointmentSet}
+      />
     </ApplicantsContainer>
   )
 }
