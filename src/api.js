@@ -29,9 +29,9 @@ export const applicants = [
     email: 'Karlheinz.Brandenburg@gmail.com',
     appointmentStatus: APPOINTMENT_STATUS.viewed,
     appointmentDate: '22 JULY 14:00',
-    viewedOn: null,
+    viewedOn: '22 JULY 14:00',
     hasBeenViewed: false,
-    offeredBid: null,
+    offeredBid: '350.000€',
   },
   {
     applicantId: 'appl_4',
