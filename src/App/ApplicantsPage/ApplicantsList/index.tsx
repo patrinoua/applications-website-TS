@@ -72,7 +72,7 @@ const ApplicantsList: React.FC<Applicants> = ({
                   if (splitName.length >= 2) {
                     initials =
                       splitName[0].slice(0, 1) + splitName[1].slice(0, 1)
-                  } else if (fullName.split(' ').length == 1) {
+                  } else if (fullName.split(' ').length === 1) {
                     initials = splitName[0].slice(0, 1)
                   }
                   return (
