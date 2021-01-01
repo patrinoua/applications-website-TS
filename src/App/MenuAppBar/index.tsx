@@ -97,7 +97,6 @@ const MenuAppBar: React.FC = () => {
               aria-label='account of current user'
               aria-controls='menu-appbar-auth'
               aria-haspopup='true'
-              onClick={handleAuthChange}
               color='primary'
             >
               <MessageIcon />
