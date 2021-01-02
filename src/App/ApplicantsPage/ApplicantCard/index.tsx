@@ -50,7 +50,7 @@ const ApplicantCard: React.FC<Props> = ({
       <AppointmentStatus>
         {appointmentStatus === APPOINTMENT_STATUS.appointmentSet &&
           `Appointment ${appointmentDate}`}
-        {appointmentStatus === APPOINTMENT_STATUS.viewed &&
+        {appointmentStatus === APPOINTMENT_STATUS.propertyViewed &&
           `Viewed on ${viewedOn}`}
       </AppointmentStatus>
       {offeredBid && <OfferedBid>Bid {offeredBid}</OfferedBid>}

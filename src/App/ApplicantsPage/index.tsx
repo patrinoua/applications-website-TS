@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { ApplicantsContainer } from './elements'
 import StatusBar from './StatusBar'
 import ApplicantsList from './ApplicantsList'
-import { applicants } from 'api'
+import applicants from 'api/applicants'
 import { APPOINTMENT_STATUS } from '../../constants'
 import { makeStyles } from '@material-ui/core/styles'
 import InputLabel from '@material-ui/core/InputLabel'
@@ -57,7 +57,8 @@ const ApplicantsPage: React.FC = () => {
   }
 
   const viewedApplicants = filteredApplicants.filter(
-    (applicant) => applicant.appointmentStatus === APPOINTMENT_STATUS.viewed
+    (applicant) =>
+      applicant.appointmentStatus === APPOINTMENT_STATUS.propertyViewed
   )
   const applicantsWithAppointmentSet = filteredApplicants.filter(
     (applicant) =>

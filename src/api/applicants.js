@@ -1,4 +1,5 @@
-import { APPOINTMENT_STATUS } from './constants'
+import { APPOINTMENT_STATUS } from '../constants'
+
 export const applicants = [
   {
     applicantId: 'appl_1',
@@ -27,7 +28,7 @@ export const applicants = [
     fullName: 'Karlheinz Brandenburg',
     phoneNumber: '+49 146 344 23811',
     email: 'Karlheinz.Brandenburg@gmail.com',
-    appointmentStatus: APPOINTMENT_STATUS.viewed,
+    appointmentStatus: APPOINTMENT_STATUS.propertyViewed,
     appointmentDate: '22 JULY 14:00',
     viewedOn: '22 JULY 14:00',
     hasBeenViewed: false,
@@ -38,7 +39,7 @@ export const applicants = [
     fullName: 'Pink Floyd',
     phoneNumber: '+49 146 344 23811',
     email: 'pink.floyd@gmail.com',
-    appointmentStatus: APPOINTMENT_STATUS.viewed,
+    appointmentStatus: APPOINTMENT_STATUS.propertyViewed,
     appointmentDate: '22 JULY 14:00',
     viewedOn: '11 June 11:30',
     hasBeenViewed: true,
@@ -49,7 +50,7 @@ export const applicants = [
     fullName: 'Tyrannosaurus Rex',
     phoneNumber: '+49 146 344 23811',
     email: 'Tyrannosaurus.Rex@gmail.com',
-    appointmentStatus: APPOINTMENT_STATUS.viewed,
+    appointmentStatus: APPOINTMENT_STATUS.propertyViewed,
     appointmentDate: '22 JULY 14:00',
     viewedOn: '11 June 11:30',
     hasBeenViewed: true,
@@ -60,7 +61,7 @@ export const applicants = [
     fullName: 'DarthVader',
     phoneNumber: '+49 146 344 23811',
     email: 'Darth.Vader@gmail.com',
-    appointmentStatus: APPOINTMENT_STATUS.viewed,
+    appointmentStatus: APPOINTMENT_STATUS.propertyViewed,
     appointmentDate: '22 JULY 14:00',
     viewedOn: '11 June 11:30',
     hasBeenViewed: true,
@@ -71,7 +72,7 @@ export const applicants = [
     fullName: 'Friedrich Nietzsche',
     phoneNumber: '+49 146 344 23811',
     email: 'friedrich.nietzsche@gmail.com',
-    appointmentStatus: APPOINTMENT_STATUS.viewed,
+    appointmentStatus: APPOINTMENT_STATUS.propertyViewed,
     appointmentDate: '22 JULY 14:00',
     viewedOn: '11 June 11:30',
     hasBeenViewed: true,
@@ -79,3 +80,4 @@ export const applicants = [
   },
 ]
 
+export default applicants

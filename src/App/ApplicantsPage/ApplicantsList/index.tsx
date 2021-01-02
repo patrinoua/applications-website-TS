@@ -1,5 +1,5 @@
 import React from 'react'
-import { status } from 'api'
+import current_status from 'api/current_status'
 
 import { H4 } from 'styleguide/typography'
 import ApplicantCard from '../ApplicantCard'
@@ -25,11 +25,11 @@ const ApplicantsList: React.FC<Applicants> = ({
 }) => {
   const applicantsType = [
     {
-      appointmentSet: `Appointment Set (${status.appointmentSet})`,
+      appointmentSet: `Appointment Set (${current_status.appointmentSet})`,
       data: applicantsWithAppointmentSet,
     },
     {
-      viewed: `Property Viewed (${status.viewed})`,
+      viewed: `Property Viewed (${current_status.propertyViewed})`,
       data: viewedApplicants,
     },
   ]

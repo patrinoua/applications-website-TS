@@ -9,7 +9,7 @@ import {
   MenuItemBottom,
   SeparatingLine,
 } from './elements'
-import { status } from 'api.js'
+import current_status from 'api/current_status'
 
 import { H3 } from 'styleguide/typography'
 
@@ -22,27 +22,27 @@ const StatusBar: React.FC = () => {
       </TitleContainer>
       <MenuItemsContainer>
         <MenuItem>
-          <MenuItemTop>{status.total}</MenuItemTop>
+          <MenuItemTop>{current_status.total}</MenuItemTop>
           <MenuItemBottom>Total</MenuItemBottom>
         </MenuItem>
         <SeparatingLine />
         <MenuItem>
-          <MenuItemTop>{status.new}</MenuItemTop>
+          <MenuItemTop>{current_status.new}</MenuItemTop>
           <MenuItemBottom>New</MenuItemBottom>
         </MenuItem>
         <SeparatingLine />
         <MenuItem>
-          <MenuItemTop>{status.viewed}</MenuItemTop>
+          <MenuItemTop>{current_status.propertyViewed}</MenuItemTop>
           <MenuItemBottom>Viewed</MenuItemBottom>
         </MenuItem>
         <SeparatingLine />
         <MenuItem>
-          <MenuItemTop>{status.appointmentSet}</MenuItemTop>
+          <MenuItemTop>{current_status.appointmentSet}</MenuItemTop>
           <MenuItemBottom>Appointments</MenuItemBottom>
         </MenuItem>
         <SeparatingLine />
         <MenuItem>
-          <MenuItemTop>{status.others}</MenuItemTop>
+          <MenuItemTop>{current_status.others}</MenuItemTop>
           <MenuItemBottom>Others</MenuItemBottom>
         </MenuItem>
       </MenuItemsContainer>

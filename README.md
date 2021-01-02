@@ -2,6 +2,49 @@
 
 https://applications-website-ts.web.app/
 
+As an owner for a property you are able to list all the applicants to your property, see their
+status, and search for specific applicants.
+
+<!-- design of this page
+https://www.figma.com/file/BgajmFzDq2h4BwVrVFegBn/mcmakler-applicants-page?node-id=0%3A1 -->
+
+● Mock api.
+● The page shows loading while fetching the data from the api (Lazy Loading)
+<!-- ● The page shows an error message if the request failed to load applicants -->
+● Applicants are grouped based on “status”
+○ Available statues are “Appointment_Set”, “Property_Viewed”, “Interested” and
+“Offer_Accepted”
+
+● Users can search for an applicant by first name, last name, or email address.
+● Search term updates the query param as following
+○ /page/?search=fred (and this will be a shareable url)
+● Applicant card shows “bid” if applicant has bid
+● Colors on applicants cards are random, and letters are (first name + last name) initials
+● “Bids” and “Status” filters are not required to function, but should be implemented in the UI
+● Applicant cards on mobile should be scrollable horizontally
+
+Here’s a list of extra points that will be very nice to have, but not required
+● Build a mobile first responsive design
+● Deploy your solution
+○ you can use Heroku
+○ or Codesandbox
+○ or any other deployment solution
+● Consider how you handle translations and localization
+Stack
+● You are required to use React
+● Typescript is very nice to have
+● Any UI library of your choice
+● Please submit your solution using a github url
+
+
+
+
+
+
+
+
+
+
 React App, using
 
 - TypeScript
