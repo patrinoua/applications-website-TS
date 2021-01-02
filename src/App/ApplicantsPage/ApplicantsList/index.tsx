@@ -1,6 +1,5 @@
 import React from 'react'
 import current_status from 'api/current_status'
-
 import { H4 } from 'styleguide/typography'
 import ApplicantCard from '../ApplicantCard'
 import { Container, AllApplicantsContainer } from './elements'

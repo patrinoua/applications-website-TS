@@ -1,4 +1,4 @@
-# typeScript-react-app
+# applications-website-TS
 
 https://applications-website-ts.web.app/
 
@@ -10,7 +10,9 @@ https://www.figma.com/file/BgajmFzDq2h4BwVrVFegBn/mcmakler-applicants-page?node-
 
 ● Mock api.
 ● The page shows loading while fetching the data from the api (Lazy Loading)
+
 <!-- ● The page shows an error message if the request failed to load applicants -->
+
 ● Applicants are grouped based on “status”
 ○ Available statues are “Appointment_Set”, “Property_Viewed”, “Interested” and
 “Offer_Accepted”
@@ -20,53 +22,35 @@ https://www.figma.com/file/BgajmFzDq2h4BwVrVFegBn/mcmakler-applicants-page?node-
 ○ /page/?search=fred (and this will be a shareable url)
 ● Applicant card shows “bid” if applicant has bid
 ● Colors on applicants cards are random, and letters are (first name + last name) initials
-● “Bids” and “Status” filters are not required to function, but should be implemented in the UI
-● Applicant cards on mobile should be scrollable horizontally
+● “Bids” and “Status” filters do not function, but are implemented in the UI
+● Applicant cards on mobile are scrollable horizontally
 
-Here’s a list of extra points that will be very nice to have, but not required
-● Build a mobile first responsive design
-● Deploy your solution
-○ you can use Heroku
-○ or Codesandbox
-○ or any other deployment solution
-● Consider how you handle translations and localization
-Stack
-● You are required to use React
-● Typescript is very nice to have
-● Any UI library of your choice
-● Please submit your solution using a github url
+Also:
+● mobile first responsive design
+● Solution Deployed on firebase [link](https://applications-website-ts.web.app/)
 
-
-
-
-
-
-
-
-
-
-React App, using
-
-- TypeScript
-- styled-components
-- Storybook
-- Atomic Design
-- Lazy Loading
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- ● Consider how you handle translations and localization
+Stack -->
 
 ## Stack
 
-- [Create React App](https://facebook.github.io/create-react-app/) [v4.0.1](https://github.com/facebook/create-react-app/releases/tag/v4.0.1)
+- React [Create React App](https://facebook.github.io/create-react-app/) [v4.0.1](https://github.com/facebook/create-react-app/releases/tag/v4.0.1)
 - [TypeScript](https://www.typescriptlang.org/) [v4.0.5](https://github.com/microsoft/TypeScript/releases/tag/v4.0.5)
+- [Material UI](http://material-ui.com/)
 - [Styled-Components](https://styled-components.com/): CSS-in-JS
-- [ESLint](https://eslint.org/)
+- [Storybook](https://storybook.js.org/)
+- (Lazy Loading](https://reactjs.org/docs/code-splitting.html)
+  [ESLint](https://eslint.org/)
   - [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier)
   - [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint#readme)
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `yarn install`
 
 ### `yarn start`
 
@@ -106,5 +90,3 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-# applications-website-TS
