@@ -30,10 +30,8 @@ export const Circle = styled.div`
   text-transform: uppercase;
 `
 export const ApplicantName = styled(H5)`
-  /* H5 - Roboto / 16 / Bold / title */
   font-weight: bold;
   font-size: 16px;
-  color: ${colors.grey500};
 `
 export const TelephoneNumber = styled(Body1)``
 export const Email = styled(Body1)``
