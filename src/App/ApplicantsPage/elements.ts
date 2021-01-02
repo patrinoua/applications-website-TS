@@ -64,17 +64,17 @@ export const MenuItem = styled.div`
 export const MenuItemTop = styled.div``
 export const MenuItemBottom = styled.div``
 export const SeparatingLine = styled.div`
-         width: 1px;
-         height: 45px;
-         background: ${colors.grey300};
-         margin: 10px;
-         @media (max-width: 550px) {
-           margin: 5px;
-         }
-         @media (max-width: 500px) {
-           display: none;
-         }
-       `
+  width: 1px;
+  height: 45px;
+  background: ${colors.grey300};
+  margin: 10px;
+  @media (max-width: 550px) {
+    margin: 5px;
+  }
+  @media (max-width: 500px) {
+    display: none;
+  }
+`
 export const SearchIcon = styled.div`
   width: 25px;
   height: 25px;
@@ -117,8 +117,7 @@ export const SearchBarContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   box-sizing: border-box;
-  margin: 20px;
-  margin-bottom: 30px;
+  margin-right: 20px;
   padding: 10px;
   border: 1px solid ${colors.grey300};
   @media (max-width: 800px) {
@@ -127,4 +126,10 @@ export const SearchBarContainer = styled.div`
 `
 export const SearchBlock = styled.div`
   display: flex;
+  margin: 20px;
+  margin-bottom: 30px;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 `

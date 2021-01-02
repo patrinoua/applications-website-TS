@@ -17,11 +17,13 @@ import {
 } from './elements'
 const useStyles = makeStyles((theme) => ({
   formControl: {
-    marginTop: 19,
     marginRight: theme.spacing(1),
     minWidth: 120,
     height: 44,
     borderRadius: 5,
+    '@media (max-width: 800px)': {
+      marginTop: 15,
+    },
   },
   select: {
     height: '45px',
@@ -72,33 +74,35 @@ const ApplicantsPage: React.FC = () => {
             onKeyUp={(e) => inputHandler(e)}
           />
         </SearchBarContainer>
-        <FormControl variant='outlined' className={classes.formControl}>
-          <InputLabel
-            htmlFor='outlined-age-native-simple'
-            className={classes.inputLabel}
-          >
-            Bids
-          </InputLabel>
-          <Select className={classes.select} native>
-            <option aria-label='None' value='' />
-            <option value={10}>100.000€</option>
-            <option value={20}>200.000€</option>
-            <option value={30}>30.000€</option>
-          </Select>
-        </FormControl>
-        <FormControl variant='outlined' className={classes.formControl}>
-          <InputLabel
-            htmlFor='outlined-age-native-simple'
-            className={classes.inputLabel}
-          >
-            Status
-          </InputLabel>
-          <Select className={classes.select} native>
-            <option aria-label='None' value='' />
-            <option value={10}>Appointment Set</option>
-            <option value={20}>Viewed</option>
-          </Select>
-        </FormControl>
+        <div>
+          <FormControl variant='outlined' className={classes.formControl}>
+            <InputLabel
+              htmlFor='outlined-age-native-simple'
+              className={classes.inputLabel}
+            >
+              Bids
+            </InputLabel>
+            <Select className={classes.select} native>
+              <option aria-label='None' value='' />
+              <option value={10}>100.000€</option>
+              <option value={20}>200.000€</option>
+              <option value={30}>30.000€</option>
+            </Select>
+          </FormControl>
+          <FormControl variant='outlined' className={classes.formControl}>
+            <InputLabel
+              htmlFor='outlined-age-native-simple'
+              className={classes.inputLabel}
+            >
+              Status
+            </InputLabel>
+            <Select className={classes.select} native>
+              <option aria-label='None' value='' />
+              <option value={10}>Appointment Set</option>
+              <option value={20}>Viewed</option>
+            </Select>
+          </FormControl>
+        </div>
       </SearchBlock>
       <ApplicantsList
         viewedApplicants={viewedApplicants}
