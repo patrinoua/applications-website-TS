@@ -41,7 +41,7 @@ export const AppointmentStatus = styled.div`
   margin-top: 10px;
   background: ${colors.grey400};
   border-radius: 3px;
-  font-family: Roboto;
+  font-family: Roboto, Palatino Linotype, sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 700;
@@ -60,7 +60,7 @@ export const OfferedBid = styled.div`
   height: 18px;
   background: ${colors.yellow400};
   border-radius: 3px;
-  font-family: Roboto;
+  font-family: Roboto, Palatino Linotype, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;

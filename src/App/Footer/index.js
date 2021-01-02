@@ -10,7 +10,7 @@ function Footer() {
         href='https://angelikipatrinou.com'
         target='_blank'
       >
-        Angeliki
+        Angeliki Patrinou
       </a>
     </Subtitle>
   )
