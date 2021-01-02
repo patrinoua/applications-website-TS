@@ -2,19 +2,8 @@ import React from 'react'
 import { status } from 'api'
 
 import { H4 } from 'styleguide/typography'
-import styled from 'styled-components'
 import ApplicantCard from '../ApplicantCard'
-const Container = styled.div`
-  margin: 20px;
-`
-const AllApplicantsContainer = styled.div`
-  display: flex;
-  overflow: scroll;
-  ::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
-  }
-`
+import { Container, AllApplicantsContainer } from './elements'
 interface ApplicantsProps {
   applicantId: string
   fullName: String
@@ -34,7 +23,7 @@ const ApplicantsList: React.FC<Applicants> = ({
   viewedApplicants,
   applicantsWithAppointmentSet,
 }) => {
-  const applicantType = [
+  const applicantsType = [
     {
       appointmentSet: `Appointment Set (${status.appointmentSet})`,
       data: applicantsWithAppointmentSet,
@@ -46,7 +35,7 @@ const ApplicantsList: React.FC<Applicants> = ({
   ]
   return (
     <Container>
-      {applicantType.map((applicant) => {
+      {applicantsType.map((applicant) => {
         const applicantsType = Object.keys(applicant)
         const applicantsContent = Object.values(applicant)
         return (
