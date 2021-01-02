@@ -4,61 +4,38 @@ import StatusBar from './StatusBar'
 import ApplicantsList from './ApplicantsList'
 import { applicants } from 'api'
 import { APPOINTMENT_STATUS } from '../../constants'
-import styled from 'styled-components'
-import colors from 'styleguide/colors'
+import { makeStyles } from '@material-ui/core/styles'
+import InputLabel from '@material-ui/core/InputLabel'
+import FormControl from '@material-ui/core/FormControl'
+import Select from '@material-ui/core/Select'
 
-export const SearchIcon = styled.div`
-  width: 25px;
-  height: 25px;
-  margin-right: 10px;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-image: url('./icons/search.svg');
-  &:hover {
-    cursor: pointer;
-  }
-`
-export const SearchBar = styled.input`
-  width: 400px;
-  max-width: 90%;
-  height: 30px;
-  border: none;
-  font-family: Roboto;
-  font-size: 16px;
-  &:focus {
-    outline: none;
-  }
-  &::placeholder {
-    font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 19px;
-    letter-spacing: 0px;
-    text-align: left;
-  }
-`
-
-export const SearchBarContainer = styled.div`
-  width: 305px;
-  height: 45px;
-  border-radius: 4px;
-  overflow: hidden;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  box-sizing: border-box;
-  margin: 20px;
-  margin-bottom: 30px;
-  padding: 10px;
-  border: 1px solid ${colors.grey300};
-  @media (max-width: 800px) {
-    width: auto;
-  }
-`
+import {
+  SearchIcon,
+  SearchText,
+  SearchBarContainer,
+  SearchBlock,
+} from './elements'
+const useStyles = makeStyles((theme) => ({
+  formControl: {
+    marginTop: 19,
+    marginRight: theme.spacing(1),
+    minWidth: 120,
+    height: 44,
+    borderRadius: 5,
+  },
+  select: {
+    height: '45px',
+    padding: 5,
+  },
+  inputLabel: {
+    height: '45px',
+    transform: 'translate(24px, 15px) scale(1)',
+  },
+}))
 
 const ApplicantsPage: React.FC = () => {
+  const classes = useStyles()
+
   const [filteredApplicants, setApplicants] = useState(applicants)
 
   const inputHandler = (e) => {
@@ -87,13 +64,42 @@ const ApplicantsPage: React.FC = () => {
   return (
     <ApplicantsContainer>
       <StatusBar />
-      <SearchBarContainer>
-        <SearchIcon />
-        <SearchBar
-          placeholder='Search for applicant'
-          onKeyUp={(e) => inputHandler(e)}
-        />
-      </SearchBarContainer>
+      <SearchBlock>
+        <SearchBarContainer>
+          <SearchIcon />
+          <SearchText
+            placeholder='Search for applicant'
+            onKeyUp={(e) => inputHandler(e)}
+          />
+        </SearchBarContainer>
+        <FormControl variant='outlined' className={classes.formControl}>
+          <InputLabel
+            htmlFor='outlined-age-native-simple'
+            className={classes.inputLabel}
+          >
+            Bids
+          </InputLabel>
+          <Select className={classes.select} native>
+            <option aria-label='None' value='' />
+            <option value={10}>100.000€</option>
+            <option value={20}>200.000€</option>
+            <option value={30}>30.000€</option>
+          </Select>
+        </FormControl>
+        <FormControl variant='outlined' className={classes.formControl}>
+          <InputLabel
+            htmlFor='outlined-age-native-simple'
+            className={classes.inputLabel}
+          >
+            Status
+          </InputLabel>
+          <Select className={classes.select} native>
+            <option aria-label='None' value='' />
+            <option value={10}>Appointment Set</option>
+            <option value={20}>Viewed</option>
+          </Select>
+        </FormControl>
+      </SearchBlock>
       <ApplicantsList
         viewedApplicants={viewedApplicants}
         applicantsWithAppointmentSet={applicantsWithAppointmentSet}
