@@ -39,7 +39,7 @@ Stack -->
 - [Material UI](http://material-ui.com/)
 - [Styled-Components](https://styled-components.com/): CSS-in-JS
 - [Storybook](https://storybook.js.org/)
-- (Lazy Loading](https://reactjs.org/docs/code-splitting.html)
+- [Lazy Loading](https://reactjs.org/docs/code-splitting.html)
   [ESLint](https://eslint.org/)
   - [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier)
   - [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint#readme)
